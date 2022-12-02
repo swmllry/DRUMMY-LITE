@@ -277,6 +277,8 @@ const Drummy = () => {
 
                     <audio id={"audio"} ref={audioRef} /* onEnded={() => setIsPlaying(true)} */ src={currentSample} autoPlay />
 
+                    <audio id={"audiotest"} src={"src/components/kit/samples/505samples/TR-505Clap.wav"} autoPlay />
+
                 </MiddleRow>
 
                 <BottomRow>
