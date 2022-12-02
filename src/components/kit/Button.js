@@ -82,9 +82,9 @@ const Button = ({ sample, id, url, setDisplay, audioContextState, setCurrentSamp
                     }
                     
                     setDisplay(sample)
-                    setCurrentSample(`${/* process.env.REACT_APP_PATH_TO_FILES ||  */''}${url}`)
+                    setCurrentSample(`${url}`)
                     
-                    console.log('process.env.REACT_APP_PATH_TO_FILES: ', process.env.REACT_APP_PATH_TO_FILES);
+                    // ${process.env.REACT_APP_PATH_TO_FILES || ''}
                 }}
                 
                 >
