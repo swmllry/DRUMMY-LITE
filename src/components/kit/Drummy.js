@@ -192,9 +192,9 @@ const Drummy = () => {
         const { value } = ev.target
         setMasterVolumeValue(masterVolumeState.gain.value = value)
     }
+    const audio = <audio id={"audiotest"} src={"src/components/kit/samples/505samples/TR-505Clap.wav"} autoPlay />
 
     const testPlaybackState = (ev) => {
-        const audio = <audio id={"audiotest"} src={"src/components/kit/samples/505samples/TR-505Clap.wav"} autoPlay />
         audio.play()
     }
 
