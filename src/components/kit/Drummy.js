@@ -194,7 +194,8 @@ const Drummy = () => {
     }
 
     const testPlaybackState = (ev) => {
-        <audio id={"audiotest"} src={"src/components/kit/samples/505samples/TR-505Clap.wav"} autoPlay />
+        const audio = <audio id={"audiotest"} src={"src/components/kit/samples/505samples/TR-505Clap.wav"} autoPlay />
+        audio.play()
     }
 
     return (
