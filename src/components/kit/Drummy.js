@@ -193,6 +193,10 @@ const Drummy = () => {
         setMasterVolumeValue(masterVolumeState.gain.value = value)
     }
 
+    const testPlaybackState = (ev) => {
+        <audio id={"audiotest"} src={"src/components/kit/samples/505samples/TR-505Clap.wav"} autoPlay />
+    }
+
     return (
 
         <Wrapper>
@@ -204,9 +208,9 @@ const Drummy = () => {
                     <DisplayContainer>
                         <Display display={display} />
                     </DisplayContainer>
-                    {/* <VisualizerContainer>
-
-                    </VisualizerContainer> */}
+                    <VisualizerContainer>
+                        <TestButton onClick={testPlaybackState}/>
+                    </VisualizerContainer>
 
                 </TopRow>
 
@@ -276,8 +280,6 @@ const Drummy = () => {
                     /> */}
 
                     <audio id={"audio"} ref={audioRef} /* onEnded={() => setIsPlaying(true)} */ src={currentSample} autoPlay />
-
-                    <audio id={"audiotest"} src={"src/components/kit/samples/505samples/TR-505Clap.wav"} autoPlay />
 
                 </MiddleRow>
 
@@ -376,13 +378,22 @@ border-left: solid 5px rgba(215,215,200,150);
 }
 `
 
-// const VisualizerContainer = styled.div`
-// width: 60%;
-// height: 70%;
-// margin-right: 7px;
-// margin-left: 7px;
-// border: solid 3px grey;
-// `
+const VisualizerContainer = styled.div`
+width: 60%;
+height: 70%;
+margin-right: 7px;
+margin-left: 7px;
+border: solid 3px grey;
+`
+
+const TestButton = styled.button`
+margin: 4px;
+background-color: rgba(81,89,107,255);
+/* background-color: #8a8886; */
+height: 40px;
+width: 90%;
+border-radius: 4px;
+`
 
 const MiddleRow = styled.div`
 display: flex;
