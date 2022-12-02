@@ -63,7 +63,7 @@ export const bottomRowSamples = [
         keyCode: "65",
         sample: "kick",
         id: "a",
-        url: '/TR-505Kick.wav'
+        url: 'TR-505Kick.wav'
         // url: 'https://s3.us-east-2.amazonaws.com/4543721.drummy/TR-505Kick.wav'
     },
     {
