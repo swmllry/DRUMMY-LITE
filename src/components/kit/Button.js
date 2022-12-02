@@ -70,7 +70,7 @@ const Button = ({ sample, id, url, setDisplay, audioContextState, setCurrentSamp
                             });
                         }
                     }
-
+                    
                     if (audioContextState?.state === 'running') {
                         if (audioRef.current) {
                             audioRef.current.play()/* .then(() => {
@@ -80,13 +80,14 @@ const Button = ({ sample, id, url, setDisplay, audioContextState, setCurrentSamp
                             });
                         }
                     }
-
+                    
                     setDisplay(sample)
-                    setCurrentSample(`/* ${process.env.REACT_APP_PATH_TO_FILES || ''} */${url}`)
-
+                    setCurrentSample(`${process.env.REACT_APP_PATH_TO_FILES || ''}${url}`)
+                    
+                    console.log('process.env.REACT_APP_PATH_TO_FILES: ', process.env.REACT_APP_PATH_TO_FILES);
                 }}
-
-            >
+                
+                >
                 {id.toUpperCase()}
             </Toggle>
 
