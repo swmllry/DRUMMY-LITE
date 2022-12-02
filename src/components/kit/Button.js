@@ -34,9 +34,7 @@ const Button = ({ sample, id, url, setDisplay, audioContextState, setCurrentSamp
                 }
 
                 setDisplay(sample)
-                setCurrentSample(`${process.env.REACT_APP_PATH_TO_FILES}${url}`)
-                console.log('url: ', url);
-
+                setCurrentSample(`${url}`)
             }
         };
 
