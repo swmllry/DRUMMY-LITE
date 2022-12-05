@@ -194,9 +194,9 @@ const Drummy = () => {
     }
     const audio = <audio id={"audiotest"} src="src/components/kit/samples/505samples/TR-505Clap.wav" autoPlay />
 
-    const testPlaybackState = (ev) => {
-        audio.play()
-    }
+    // const testPlaybackState = (ev) => {
+    //     audio.play()
+    // }
 
     return (
 
@@ -209,9 +209,9 @@ const Drummy = () => {
                     <DisplayContainer>
                         <Display display={display} />
                     </DisplayContainer>
-                    <VisualizerContainer>
+                    {/* <VisualizerContainer>
                         <TestButton onClick={testPlaybackState}/>
-                    </VisualizerContainer>
+                    </VisualizerContainer> */}
 
                 </TopRow>
 
