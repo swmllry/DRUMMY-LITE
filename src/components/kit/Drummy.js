@@ -192,11 +192,6 @@ const Drummy = () => {
         const { value } = ev.target
         setMasterVolumeValue(masterVolumeState.gain.value = value)
     }
-    // const audio = <audio id={"audiotest"} src="src/components/kit/samples/505samples/TR-505Clap.wav" autoPlay />
-
-    // const testPlaybackState = (ev) => {
-    //     audio.play()
-    // }
 
     return (
 
@@ -210,7 +205,7 @@ const Drummy = () => {
                         <Display display={display} />
                     </DisplayContainer>
                     {/* <VisualizerContainer>
-                        <TestButton onClick={testPlaybackState}/>
+
                     </VisualizerContainer> */}
 
                 </TopRow>
@@ -379,22 +374,13 @@ border-left: solid 5px rgba(215,215,200,150);
 }
 `
 
-const VisualizerContainer = styled.div`
-width: 60%;
-height: 70%;
-margin-right: 7px;
-margin-left: 7px;
-border: solid 3px grey;
-`
-
-const TestButton = styled.button`
-margin: 4px;
-background-color: rgba(81,89,107,255);
-/* background-color: #8a8886; */
-height: 40px;
-width: 90%;
-border-radius: 4px;
-`
+// const VisualizerContainer = styled.div`
+// width: 60%;
+// height: 70%;
+// margin-right: 7px;
+// margin-left: 7px;
+// border: solid 3px grey;
+// `
 
 const MiddleRow = styled.div`
 display: flex;
