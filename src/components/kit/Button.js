@@ -15,9 +15,9 @@ const Button = ({ sample, id, url, setDisplay, audioContextState, setCurrentSamp
                 if (audioContextState?.state === 'suspended') {
                     audioContextState.resume();
                     if (audioRef.current) {
-                        audioRef.current.play()/* .then(() => {
-                            audioRef.current.pause()
-                        }) */.catch(error => {
+                        audioRef.current.play().then(() => {
+                            audioRef.current.currentTime = 0
+                        }).catch(error => {
                             console.log(error);
                         });
                     }
@@ -25,9 +25,9 @@ const Button = ({ sample, id, url, setDisplay, audioContextState, setCurrentSamp
 
                 if (audioContextState?.state === 'running') {
                     if (audioRef.current) {
-                        audioRef.current.play()/* .then(() => {
-                            audioRef.current.pause()
-                        }) */.catch(error => {
+                        audioRef.current.play().then(() => {
+                            audioRef.current.currentTime = 0
+                        }).catch(error => {
                             console.log(error);
                         });
                     }
@@ -61,31 +61,29 @@ const Button = ({ sample, id, url, setDisplay, audioContextState, setCurrentSamp
                     if (audioContextState?.state === 'suspended') {
                         audioContextState.resume();
                         if (audioRef.current) {
-                            audioRef.current.play()/* .then(() => {
-                                audioRef.current.pause()
-                            }) */.catch(error => {
-                                console.log(error);
-                            });
+                            audioRef.current.play()
+                                .catch(error => {
+                                    console.log(error);
+                                });
                         }
                     }
-                    
+
                     if (audioContextState?.state === 'running') {
                         if (audioRef.current) {
-                            audioRef.current.play()/* .then(() => {
-                                audioRef.current.pause()
-                            }) */.catch(error => {
-                                console.log(error);
-                            });
+                            audioRef.current.play()
+                                .catch(error => {
+                                    console.log(error);
+                                });
                         }
                     }
-                    
+
                     setDisplay(sample)
                     setCurrentSample(`${url}`)
-                    
+
                     // ${process.env.REACT_APP_PATH_TO_FILES || ''}
                 }}
-                
-                >
+
+            >
                 {id.toUpperCase()}
             </Toggle>
 
